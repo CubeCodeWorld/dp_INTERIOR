@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DP Interior</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+
+
+  <!-- Layanan Home Start -->
+
+<header class="header">
+  <div class="container nav">
+
+    <div class="logo-wrap">
+      <img src="img/dp_interior.png" alt="DP Interior" class="logo">
+      <div class="logo-text">
+        <span class="brand">dp INTERIOR</span>
+        <small>CRAFT CUBE LIVING</small>
+      </div>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="menu">
+      <a href="#hero">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Our Services</a>
+      <a href="#projects">Featured Projects</a>
+      <a href="#experience">Our Experience</a>
+      <a href="#footer">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<section id="hero" class="hero">
+  <div class="hero-slider">
+    <img src="img/rumah1_1.png" class="hero-bg active" alt="Hero 1">
+    <img src="img/rumah2_1.png" class="hero-bg" alt="Hero 2">
+    <img src="img/rumah3_1.png" class="hero-bg" alt="Hero 3">
+    <img src="img/kids4_1.png" class="hero-bg" alt="Hero 4">
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content">
+    <div class="hero-left">
+      <h1>
+     ㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+     ㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+     ㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+     ㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+      </h1>
+
+      <p>
+    ㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+    ㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+    ㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+    ㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+    ㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+    ㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+      </p>
+
+      
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-gold">Lihat Proyek</a>
+        <a href="https://api.whatsapp.com/send?phone=6281545694102" class="btn btn-outline">Hubung Kami</a>
+      </div>
+
+      <div class="hero-tags">
+        <span>Modern</span>
+        <span>Clean</span>
+        <span>Elegant</span>
+        <span>Premium</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+<!-- Layanan Home End -->
+
+
+<!-- Engine Script Start -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const slides = document.querySelectorAll(".hero-bg");
+const dots = document.querySelectorAll(".dot");
+
+let index = 0;
+
+function showSlide(i){
+
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
+
+  slides[i].classList.add("active");
+  dots[i].classList.add("active");
+
+}
+
+setInterval(() => {
+
+  index++;
+
+  if(index >= slides.length){
+    index = 0;
+  }
+
+  showSlide(index);
+
+}, 3500);
+
+});
+
+</script>
+
+
+<!-- Engine Script End -->
+
+ <!-- About Us Start -->
+
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-grid about-grid">
+        <div class="about-left">
+          <h2>About Us</h2>
+          <p>
+            Since 2024, dp Interior has emerged as a creation of the nation’s young talents, delivering modern, clean, and elegant interior designs with a balanced harmony between aesthetics and functionality.
+          </p>
+
+          <p>
+            ㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+          </p>
+
+          <p>
+            We listen to your needs and transform them into exclusive spaces that are comfortable, refined, and premium in quality.
+          </p>
+
+          <div class="mini-cards">
+            <div class="mini-card">
+              <h3>Design Approach</h3>
+              <p>Functional • Aesthetic  Timeless • Detail-Oriented</p>
+            </div>
+            <div class="mini-card">
+              <h3>Project Scope</h3>
+              <p>Interior Design • Custom Furniture • Renovation</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <div class="image-card">
+            <img src="img/about1.png" alt="About 1">
+          </div>
+          <div class="image-card">
+            <img src="img/about2.png" alt="About 2">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us End -->
+
+  <!-- Our Servive Start -->
+
+  <section id="services" class="section services">
+    <div class="container">
+      <h2>Our Services</h2>
+
+      <div class="service-grid">
+        <div class="service-card">
+          <img src="img/layanan1.png" alt="Service 1">
+          <div class="service-body">
+            <h3>Interior Design & Consultation</h3>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="img/layanan2.png" alt="Service 2">
+          <div class="service-body">
+            <h3>Interior Build</h3>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="img/layanan3.png" alt="Service 3">
+          <div class="service-body">
+            <h3>Custom Furniture</h3>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="img/layanan4.png" alt="Service 4">
+          <div class="service-body">
+            <h3>Building Construction</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Service End -->
+
+
+<!-- Engine Script Start -->
+
+<script>
+  function openCategory(modalId) {
+    document.getElementById(modalId).style.display = "block";
+  }
+
+  function closeCategory(modalId) {
+    document.getElementById(modalId).style.display = "none";
+  }
+
+  window.addEventListener("click", function (event) {
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach((modal) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+
+</script>
+
+<!-- Engine Script End -->
+
+
+<!-- Grid Galeri Proyek Start -->
+  
+<section id="projects" class="section gallery-modern">
+  <div class="container">
+    <h2 class="gallery-title">Featured Projects</h2>
+
+    <!-- Modern Minimalist House -->
+    <div class="gallery-block">
+      <h3 class="gallery-subtitle">Modern House</h3>
+      <div class="gallery-modern-grid">
+        <div class="g-item g-big">
+          <img src="img/rumah1_1.png" alt="Modern 1">
+        </div>
+
+        <div class="g-item">
+          <img src="img/rumah1_2.png" alt="Modern 2">
+        </div>
+
+        <div class="g-item">
+          <img src="img/rumah1_3.png" alt="Modern 3">
+        </div>
+
+        <div class="g-item">
+          <img src="img/rumah1_4.png" alt="Modern 4">
+        </div>
+
+        <button class="g-banner" onclick="openCategory('modernModal')" type="button">
+          <span>Modern House</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Urban Contemporary House -->
+    <div class="gallery-block">
+      <h3 class="gallery-subtitle">Urban Contemporary House</h3>
+      <div class="gallery-modern-grid">
+        <div class="g-item g-big">
+          <img src="img/rumah2_1.png" alt="Klasik 1">
+        </div>
+
+        <div class="g-item">
+          <img src="img/rumah2_2.png" alt="Klasik 2">
+        </div>
+
+        <div class="g-item">
+          <img src="img/rumah2_3.png" alt="Klasik 3">
+        </div>
+
+        <div class="g-item">
+          <img src="img/rumah2_4.png" alt="Klasik 4">
+        </div>
+
+        <button class="g-banner" onclick="openCategory('klasikModal')" type="button">
+          <span>Urban Contemporary House</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Modern Industrial House -->
+    <div class="gallery-block">
+      <h3 class="gallery-subtitle">Modern Industrial House</h3>
+      <div class="gallery-modern-grid">
+        <div class="g-item g-big">
+          <img src="img/rumah3_1.png" alt="Casual 1">
+        </div>
+
+        <div class="g-item">
+          <img src="img/rumah3_2.png" alt="Casual 2">
+        </div>
+
+        <div class="g-item">
+          <img src="img/rumah3_3.png" alt="Casual 3">
+        </div>
+
+        <div class="g-item">
+          <img src="img/rumah3_4.png" alt="Casual 4">
+        </div>
+
+        <button class="g-banner" onclick="openCategory('casualModal')" type="button">
+          <span>Modern Industrial House</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Kids Room Interior -->
+    <div class="gallery-block">
+      <h3 class="gallery-subtitle">Kids Room Interior</h3>
+      <div class="gallery-modern-grid">
+        <div class="g-item g-big">
+          <img src="img/kids4_1.png" alt="Kids 1">
+        </div>
+
+        <div class="g-item">
+          <img src="img/kids4_3.png" alt="Kids 2">
+        </div>
+
+        <div class="g-item">
+          <img src="img/kids4_2.png" alt="Kids 3">
+        </div>
+
+        <div class="g-item">
+          <img src="img/kids4_4.png" alt="Kids 4">
+        </div>
+
+        <button class="g-banner" onclick="openCategory('kidsModal')" type="button">
+          <span>Kids Room Interior</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Modern Interior -->
+<div id="modernModal" class="modal">
+  <div class="modal-content">
+    <button class="close" onclick="closeCategory('modernModal')" type="button">✕</button>
+    <h2>Modern Interior</h2>
+    <p>
+    A contemporary home designed with a balance of aesthetics and functionality. Clean forms, warm textures, and thoughtful spatial planning create a comfortable and sophisticated living space.
+    </p>
+    <div class="modal-gallery">
+      <img src="img/rumah1_2.png" alt="Modern Project 1">
+      <img src="img/rumah1_3.png" alt="Modern Project 2">
+      <img src="img/rumah1_4.png" alt="Modern Project 3">
+    </div>
+  </div>
+</div>
+
+<!-- Modal Urban Contemporary House -->
+<div id="klasikModal" class="modal">
+  <div class="modal-content">
+    <button class="close" onclick="closeCategory('klasikModal')" type="button">✕</button>
+    <h2>Urban Contemporary House</h2>
+    <p>
+    A contemporary urban residence designed with bold geometric forms, clean lines, and a balanced combination of natural textures. The space emphasizes functionality, comfort, and modern elegance to create a sophisticated and timeless living environment.
+    </p>
+    <div class="modal-gallery">
+      <img src="img/rumah2_2.png" alt="Klasik Project 1">
+      <img src="img/rumah2_3.png" alt="Klasik Project 2">
+      <img src="img/rumah2_4.png" alt="Klasik Project 3">
+    </div>
+  </div>
+</div>
+
+<!-- Modal Modern Industrial House -->
+<div id="casualModal" class="modal">
+  <div class="modal-content">
+    <button class="close" onclick="closeCategory('casualModal')" type="button">✕</button>
+    <h2>Modern Industrial House</h2>
+    <p>
+    A modern industrial residence featuring strong architectural character, raw textures, and a balanced combination of concrete, metal, and natural materials. The design emphasizes functionality, durability, and aesthetic simplicity to create a bold yet comfortable living space.
+    </p>
+    <div class="modal-gallery">
+      <img src="img/rumah3_2.png" alt="Casual Project 1">
+      <img src="img/rumah3_3.png" alt="Casual Project 2">
+      <img src="img/rumah3_4.png" alt="Casual Project 3">
+    </div>
+  </div>
+</div>
+
+<!-- Modal Kids Interior -->
+<div id="kidsModal" class="modal">
+  <div class="modal-content">
+    <button class="close" onclick="closeCategory('kidsModal')" type="button">✕</button>
+    <h2>Kids Interior</h2>
+    <p>
+     A thoughtfully designed children’s space that combines creativity, comfort, and functionality. Soft colors, playful elements, and smart storage solutions create a safe, inspiring, and enjoyable environment that supports learning, play, and growth.
+    </p>
+    <div class="modal-gallery">
+      <img src="img/kids4_2.png" alt="Kids Project 1">
+      <img src="img/kids4_3.png" alt="Kids Project 2">
+      <img src="img/kids4_4.png" alt="Kids Project 3">
+    </div>
+  </div>
+</div>
+
+<!-- Grid Galeri Proyek End -->
+
+<!-- Our Experience Start -->
+
+  <section id="experience" class="section projects-modern">
+  <img src="img/rumah1_1.png" alt="Project Background" class="projects-bg" />
+  <div class="projects-overlay"></div>
+
+  <div class="container projects-modern-content">
+
+    <div class="projects-modern-left">
+      <span class="section-label">Our Experience</span>
+      <h2>WHAT MAKES OUR PROJECTS STAND OUT</h2>
+      <p>
+        We combine thoughtful design, quality craftsmanship, and efficient execution to deliver exceptional results.
+      </p>
+    </div>
+
+    <div class="projects-modern-right">
+
+      <div class="projects-feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">▣</div>
+          <h3>Project Completed</h3>
+          <p>Delivering high-quality interior and construction projects with precision and aesthetic excellence.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">✦</div>
+          <h3>Happy Clients</h3>
+          <p>We build lasting relationships through trust, quality craftsmanship, and professional service.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">▤</div>
+          <h3>Years Experience</h3>
+          <p>Years of experience help us understand client needs and deliver reliable, industry-standard results.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">◫</div>
+          <h3>Workshop</h3>
+          <p>Our in-house workshop ensures better quality control, efficient production, and tailored solutions.</p>
+        </div>
+      </div>
+
+      <div class="projects-stats-modern">
+        <div class="stat-modern">
+          <span>60+</span>
+          <small>Project Completed</small>
+        </div>
+
+        <div class="stat-modern">
+          <span>56</span>
+          <small>Happy Clients</small>
+        </div>
+
+        <div class="stat-modern">
+          <span>3+</span>
+          <small>Years Experience</small>
+        </div>
+
+        <div class="stat-modern">
+          <span>4</span>
+          <small>Total Workshop</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Our Experience End -->
+
+<!-- Clients Start -->
+
+<section class="clients">
+  <div class="container">
+    <div class="clients-head">
+      <span>-</span>
+      <h2>Trusted by Companies & Clients</h2>
+    </div>
+
+    <div class="swiper clients-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/partner1.png" alt="Partner 1"></div>
+        <div class="swiper-slide"><img src="img/partner2.png" alt="Partner 2"></div>
+        <div class="swiper-slide"><img src="img/Partner3.png" alt="Partner 3"></div>
+        <div class="swiper-slide"><img src="img/partner4.png" alt="Partner 4"></div>
+        <div class="swiper-slide"><img src="img/partner5.jpg" alt="Partner 5"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Clients End -->
+
+<!-- pop up Start -->
+
+<a href="https://api.whatsapp.com/send?phone=6281545694102" 
+   class="floating-wa" 
+   target="_blank" 
+   aria-label="Chat WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<!-- pop up End -->
+
+
+<!-- Footer Start -->
+
+<section id="footer">
+<footer class="footer-bottom">
+
+  <!-- kiri -->
+  <div class="footer-left">
+    <div class="powered">Powered by VanJaya</div>
+    <div class="copyright">© 2026 DP INTERIOR</div>
+  </div>
+
+  <!-- tengah -->
+  <div class="footer-center">
+
+    <div class="footer-menu">
+      <a href="#about">About</a>
+      <a href="#services">Our Services</a>
+      <a href="#projects">Featured Projects</a>
+      <a href="#experience">Our Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="mailto:ivannyrafiif@gmail.com">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+
+      <a href="https://api.whatsapp.com/send?phone=6281210488167">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+      <a href="https://www.instagram.com/dp_interiorr/">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- kanan kosong biar center tetap tengah -->
+  <div></div>
+
+</footer>
+</section>
+
+<!-- Footer End -->
+
+<!-- Engine Script Start -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".clients-slider", {
+      loop: true,
+      slidesPerView: 5,
+      spaceBetween: 50,
+      speed: 3000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50
+        }
+      }
+    });
+  });
+</script>
+
+<!-- Engine Script End -->
+ 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const navToggle = document.querySelector(".nav-toggle");
+  const menu = document.querySelector(".menu");
+
+  if (navToggle && menu) {
+    navToggle.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  }
+});
+</script>
+
+</body>
+</html>
+
